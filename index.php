@@ -29,20 +29,30 @@
       <div id="home">
         <div class="jumbotron">
           <h1>Manage Your Cronjobs Anywhere!</h1>
-          <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p class="lead">Enough with dealing with Crontab syntax. Manage your users crontab via the web easily.</p>
         </div>
 
         <hr>
 
         <div class="row-fluid marketing">
           <div class="span6">
-            <h4>Subheading</h4>
-            <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+            <h4>How it Works</h4>
+            <p>It's pretty simple. Rather then dealing with criptic crontab time syntax and script reference by hand, this simple and straight forward web interface allows you to easily add and remove cronjobs on your system in seconds.</p>
           </div>
 
           <div class="span6">
-            <h4>Subheading</h4>
-            <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+            <h4>Project Source</h4>
+            <p>Feel free to contribute to this project at any time by visiting the project GitHub page. You can also find the issue track as well in case you have encounted any undocumented issues.</p>
+            
+            <iframe src="http://ghbtns.com/github-btn.html?user=fisherinnovation&repo=CronWeb&type=fork&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="130" height="30"></iframe>
+
+            <iframe src="http://ghbtns.com/github-btn.html?user=fisherinnovation&repo=CronWeb&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+            <br>
+  <iframe src="http://ghbtns.com/github-btn.html?user=fisherinnovation&repo=CronWeb&type=follow&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="250" height="30"></iframe>
+
           </div>
         </div>
       </div>
@@ -53,11 +63,6 @@
           <div class="span6">
               <fieldset>
                 <legend>Legend</legend>
-                <!--
-                <label>Job Name</label>
-                <input class="add-name" type="text" placeholder="Type something…">
-                -->
-
                 <label>Minute</label>
                 <input class="add-minute" type="text" placeholder="0-59 or *">
                 
@@ -77,7 +82,7 @@
 
           <div class="span6">
             <h4>Command to Execute</h4>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p>Enter either a valid CLI command to run on the system with the current users permissions, or reference a external script for execution.</p>
             <textarea class="add-command" style="width:100%;" rows="5"></textarea>
             <p>
               <a id="save-btn" class="btn btn-large btn-success">Save New Cronjob</a>
@@ -89,6 +94,7 @@
 
       <div id="active">
         <h3>Active Cronjobs</h3>
+        <p><a class="btn btn-danger">Delete All Jobs</a></p>
         <table class="table table-striped">
           <thead>
             <tr>
