@@ -1,8 +1,19 @@
 var PAGES = ['home', 'new', 'active'];
 
 $(document).ready(function() {
+	var hash = window.location.hash;
+	if(hash == '#new') changePage('new');
+	if(hash == '#active') changePage('active');
+
 	$('#save-btn').bind('click', onSaveButtonClick);
+	$('.delete-all-btn').bind('click', onDeleteAllJobsClick);
 });
+
+function onDeleteAllJobsClick(event) {
+	$.ajax({url:"lib/deleteall.php"}).done(function(data) {
+		location.reload();
+	});
+}
 
 function onSaveButtonClick(event) {
 	var minute = $('.add-minute').val();

@@ -186,6 +186,18 @@ class Crontab {
 		
 		return false;
 	}
+
+	/**
+	* Deletes all crontab entries.
+	*/
+	function deleteAllJobs() {
+		if(is_writable($this->destination) || !file_exists($this->destination)){
+			exec($this->crontab.' -r;');
+			file_put_contents($this->destination, '', LOCK_EX);
+			exec($this->crontab.' '.$this->destination.';');
+			return true;
+		}
+	}
 	
 	/**
 	* List current cron jobs

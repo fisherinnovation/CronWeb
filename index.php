@@ -94,7 +94,7 @@
 
       <div id="active">
         <h3>Active Cronjobs</h3>
-        <p><a class="btn btn-danger">Delete All Jobs</a></p>
+        <p><a class="btn btn-danger delete-all-btn">Delete All Jobs</a></p>
         <table class="table table-striped">
           <thead>
             <tr>
