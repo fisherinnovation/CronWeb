@@ -1,0 +1,11 @@
+#new {
+	display:none;
+}
+
+#active {
+	display:none;
+}
+
+.nav li a {
+	cursor: pointer;
+}
