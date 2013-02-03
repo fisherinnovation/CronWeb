@@ -15,6 +15,14 @@ function onDeleteAllJobsClick(event) {
 	});
 }
 
+function onDeleteJobClick(jobID) {
+	$.post("lib/deletejob.php", { "jobid":jobID },
+	  	function(data){
+	    	location.reload();
+		}
+	);
+}
+
 function onSaveButtonClick(event) {
 	var minute = $('.add-minute').val();
 	var hour = $('.add-hour').val();
@@ -58,7 +66,7 @@ function getActiveCronjobs() {
 	  		$.each(n, function(x, y) {
 	  			items += '<td>' + y + '</td>';
 	  		});
-	  		items += '<td><a class="btn btn-warning remove_' + key + '">Remove</a></td>';
+	  		items += '<td><a class="btn btn-warning remove_' + key + '" onclick="onDeleteJobClick(' + key + ')">Remove</a></td>';
 	  		items += '</tr>';
 	  	});
 

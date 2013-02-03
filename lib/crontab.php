@@ -198,6 +198,34 @@ class Crontab {
 			return true;
 		}
 	}
+
+	/**
+	* Deletes a specific crontab entry.
+	*/
+	function deleteJob($id) {
+		$allJobs = $this->listJobs();
+		foreach ($allJobs as $key => $job) {
+			if($key == $id) {
+				unset($allJobs[$key]);
+			}
+		}
+
+		// Update the crontab
+		$this->deleteAllJobs();
+
+		$contents = '';
+		foreach ($allJobs as $job) {
+			$contents .= $job;
+			$contents .= "\n";
+		}
+		
+		if(is_writable($this->destination) || !file_exists($this->destination)){
+			exec($this->crontab.' -r;');
+			file_put_contents($this->destination, $contents, LOCK_EX);
+			exec($this->crontab.' '.$this->destination.';');
+			return true;
+		}
+	}
 	
 	/**
 	* List current cron jobs
