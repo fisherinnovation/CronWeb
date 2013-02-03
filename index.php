@@ -11,44 +11,6 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-
-    <style type="text/css">
-      body {
-        padding-top: 20px;
-        padding-bottom: 40px;
-      }
-
-      /* Custom container */
-      .container-narrow {
-        margin: 0 auto;
-        max-width: 700px;
-      }
-      .container-narrow > hr {
-        margin: 30px 0;
-      }
-
-      /* Main marketing message and sign up button */
-      .jumbotron {
-        margin: 60px 0;
-        text-align: center;
-      }
-      .jumbotron h1 {
-        font-size: 72px;
-        line-height: 1;
-      }
-      .jumbotron .btn {
-        font-size: 21px;
-        padding: 14px 24px;
-      }
-
-      /* Supporting marketing content */
-      .marketing {
-        margin: 60px 0;
-      }
-      .marketing p + h4 {
-        margin-top: 28px;
-      }
-    </style>
   </head>
 
   <body>
@@ -59,7 +21,7 @@
           <li class="nav-new"><a href="#new" onclick="changePage('new');">New Cronjob</a></li>
           <li class="nav-active"><a href="#active" onclick="changePage('active');">Active Cronjobs</a></li>
         </ul>
-        <h1>Cronweb <span class="muted">by Fisher Innovation</span></h1>
+        <h1><a onclick="changePage('home');">Cronweb <span class="muted">by Fisher Innovation</span></a></h1>
       </div>
 
       <hr>
@@ -147,7 +109,7 @@
         <hr>
 
         <div class="footer">
-          <p>&copy; <a href="http://www.fisherinnovation.com" target="_blank">Fisher Innovation</a></p>
+          <p>&copy; <?php echo date('Y'); ?> <a href="http://www.fisherinnovation.com" target="_blank">Fisher Innovation</a></p>
         </div>
       </div>
     </div>

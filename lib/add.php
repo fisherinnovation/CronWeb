@@ -11,7 +11,7 @@
 	if(isset($_POST['daymonth']) && $_POST['daymonth'] != '') $cron->onDayOfMonth($_POST['daymonth']);
 	if(isset($_POST['command']) && $_POST['command'] != '') $cron->doJob($_POST['command']);	
 
-	if($cron->activate(false)) {
+	if($cron->activate()) {
 		echo json_encode($cron);
 	} else {
 		echo false;

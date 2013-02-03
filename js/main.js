@@ -37,8 +37,7 @@ function changePage(page) {
 
 function getActiveCronjobs() {
 	$.getJSON('lib/active.php', function(data) {
-		console.log(data);
-	  	var items = '';
+		var items = '';
 	 
 	  	$.each(data, function(key, val) {
 	  		var n = val.split(' ');

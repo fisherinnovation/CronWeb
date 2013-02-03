@@ -170,7 +170,11 @@ class Crontab {
 		$contents .= "\n";
 		
 		if($includeOldJobs) {
-			$contents .= $this->listJobs();
+			$oldJobs = $this->listJobs();
+			foreach ($oldJobs as $job) {
+				$contents .= $job;
+				$contents .= "\n";
+			}
 		}
 		
 		if(is_writable($this->destination) || !file_exists($this->destination)){
