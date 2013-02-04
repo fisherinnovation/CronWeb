@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,7 +28,7 @@
       <div id="home">
         <div class="jumbotron">
           <h1>Manage Your Cronjobs Anywhere!</h1>
-          <p class="lead">Enough with dealing with Crontab syntax. Manage your users crontab via the web easily.</p>
+          <p class="lead">Enough dealing with tricky Cronjob syntax. Manage your users crontab via the web easily.</p>
         </div>
 
         <hr>
