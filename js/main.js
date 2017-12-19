@@ -62,10 +62,15 @@ function getActiveCronjobs() {
 	  		var n = val.split(' ');
 
 	  		items += '<tr>';
+			var cmd = '';
 
 	  		$.each(n, function(x, y) {
-	  			items += '<td>' + y + '</td>';
+	  			if(x < 5)
+					items += '<td>' + y + '</td>';
+				else 
+					cmd += ' ' + y + ' ';
 	  		});
+			items += '<td>' + cmd + '</td>';
 	  		items += '<td><a class="btn btn-warning remove_' + key + '" onclick="onDeleteJobClick(' + key + ')">Remove</a></td>';
 	  		items += '</tr>';
 	  	});
